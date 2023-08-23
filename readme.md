@@ -1,6 +1,5 @@
 # FullCycle Desafio Docker 02
 
-- mysql: dados do BD, Tabela people está vazia
 - nginx: proxy reverso para comunição com o projeto node
 - node: projeto que se conecta ao mysql, gera um nome aleatório e exibe a lista completa de nomes na tabela em /
 
