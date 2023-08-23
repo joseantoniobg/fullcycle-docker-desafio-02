@@ -28,18 +28,18 @@ services:
 
   db:
     image: mysql
-    command: --innodb-use-native-aio=0
+    command: --innodb-use-native-aio=0 --default-authentication-plugin=mysql_native_password
     container_name: db
     restart: always
     tty: true
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./initdb.sql:/docker-entrypoint-initdb.d/1.sql
     environment:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
     networks:
       - node-network
-
 networks:
   node-network:
     driver: bridge
