@@ -5,3 +5,4 @@ Dockerfile.prod
 node_modules
 docker-compose.laravel.yaml
 mysql/*
+node/node_modules
